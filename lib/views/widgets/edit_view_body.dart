@@ -26,7 +26,7 @@ class _EditViewBodyState extends State<EditViewBody> {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           CustomAppBar(
@@ -40,7 +40,7 @@ class _EditViewBodyState extends State<EditViewBody> {
               Navigator.pop(context);
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           CustomTextField(
@@ -49,7 +49,7 @@ class _EditViewBodyState extends State<EditViewBody> {
               title=data;
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           CustomTextField(
@@ -59,7 +59,7 @@ class _EditViewBodyState extends State<EditViewBody> {
               subtitle=data;
             },
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           ColorListForEdit(
             note: widget.note,
           ),

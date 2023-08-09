@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hive/hive.dart';
-import 'package:intl/intl.dart';
 import 'package:note_app/cubits/cubit/view_note_cubit/view_note_cubit.dart';
 import 'package:note_app/modals/note_model.dart';
 import 'package:note_app/views/edit_view.dart';
-import 'package:note_app/views/widgets/constant.dart';
 
 class CustomNoteItem extends StatelessWidget {
   const CustomNoteItem({super.key, required this.note});
@@ -18,13 +15,16 @@ class CustomNoteItem extends StatelessWidget {
         Navigator.push(context, MaterialPageRoute(builder: (context)=>EditView(note: note,)));
       },
       child: Container(
+        padding: const EdgeInsets.only(left: 16, top: 24, bottom: 24),
+        decoration: BoxDecoration(
+            color: Color(note.color), borderRadius: BorderRadius.circular(16)),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               ListTile(
                 trailing: IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.delete,
                     color: Colors.black,
                     size: 30,
@@ -56,9 +56,6 @@ class CustomNoteItem extends StatelessWidget {
                 ),
               )
             ]),
-        padding: EdgeInsets.only(left: 16, top: 24, bottom: 24),
-        decoration: BoxDecoration(
-            color: Color(note.color), borderRadius: BorderRadius.circular(16)),
       ),
     );
   }

@@ -30,7 +30,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
       key: formKey,
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           CustomTextField(
@@ -39,7 +39,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
               title = value;
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           CustomTextField(
@@ -49,11 +49,11 @@ class _AddNoteFormState extends State<AddNoteForm> {
               subtitle = value;
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
-          ColorsListView(),
-          SizedBox(
+          const ColorsListView(),
+          const SizedBox(
             height: 75,
           ),
           BlocBuilder<AddNoteCubit, AddNoteState>(

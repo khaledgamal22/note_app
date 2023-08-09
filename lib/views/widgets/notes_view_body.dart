@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:note_app/cubits/cubit/view_note_cubit/view_note_cubit.dart';
 import 'package:note_app/views/widgets/custom_appBar.dart';
-import 'package:note_app/views/widgets/custom_noteitem.dart';
 import 'package:note_app/views/widgets/notes_listView.dart';
 
 class NotesViewBody extends StatefulWidget {
@@ -23,7 +22,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return const Padding(
       padding: EdgeInsets.symmetric(
         horizontal: 16,
       ),
